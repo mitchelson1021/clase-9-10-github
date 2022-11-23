@@ -24,6 +24,8 @@ section {
     justify-content: center;
     align-items: center;
     align-content: center;
+    animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    /*animacion agregada*/
 }
 
 .card:hover {
@@ -68,4 +70,47 @@ button {
     border: 0px;
     border-radius: 10px;
     box-shadow: 5px 5px 12px lightgray;
+}
+
+
+/*Nueva Rama de animaciones*/
+
+.animation-bell:hover {
+    animation: wobble-hor-bottom 0.8s both;
+    /*animacion de un generador*/
+}
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+    15% {
+        transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+        transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+        transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+
+/*Media queries con Grid*/
+
+@media (max-width: 700px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 100px 10px;
+        grid-template-areas: ". uno ." ". dos ." ". tres .";
+    }
 }
