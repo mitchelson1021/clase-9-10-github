@@ -1,0 +1,71 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section {
+    padding: 5%;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    grid-template-areas: "uno dos tres"
+}
+
+.card {
+    max-width: 360px;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 18px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.card:hover {
+    transition: 300ms;
+    transform: scale(105%);
+}
+
+.card img {
+    height: 300px;
+    overflow-y: hidden;
+}
+
+.uno {
+    grid-area: uno;
+}
+
+.dos {
+    grid-area: dos;
+}
+
+.tres {
+    grid-area: tres;
+}
+
+.separador {
+    width: 100%;
+    border-top: 2px solid lightgray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fa-solid {
+    color: #E8CA0A;
+}
+
+button {
+    margin: 75px;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 14px;
+    padding: 10px 30px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px lightgray;
+}
